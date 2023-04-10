@@ -1,6 +1,5 @@
 import { useId } from "react";
 
-import * as CSS from "csstype";
 import Select, {
   components,
   DropdownIndicatorProps,
@@ -16,19 +15,14 @@ export interface Option {
 }
 
 interface Props {
-  name: string;
   options: Option[];
   value: any;
-  fontSize?: string;
-  textStyles?: CSS.Properties;
   onChange?: (value: any) => void;
 }
 
 export default function SelectBox({
-  name,
   options,
   value,
-  textStyles,
   onChange,
 }: Props) {
   const styles: StylesConfig<Option, boolean, GroupBase<Option>> = {
@@ -46,7 +40,6 @@ export default function SelectBox({
     valueContainer: (provided) => ({
       ...provided,
       padding: "0",
-      ...textStyles,
     }),
     singleValue: (provided) => ({
       ...provided,
@@ -55,8 +48,7 @@ export default function SelectBox({
       height: "46px",
       lineHeight: "46px",
       color: "black",
-      fontSize: "14px",
-      paddingLeft: textStyles?.paddingLeft ? "0" : "10px",
+      fontSize: "14px", 
     }),
     control: (provided) => ({
       ...provided,

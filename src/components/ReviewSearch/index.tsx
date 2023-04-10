@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import Input from "@components/common/Input";
 import Label from "@components/common/Label";
 
@@ -6,7 +5,7 @@ import { useReviewStore } from "@store/review";
 
 import * as S from "./style";
 
-function index() {
+function Index() {
   const { searchReview } = useReviewStore();
 
   return (
@@ -20,4 +19,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

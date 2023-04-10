@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 
 import Label from "@components/common/Label";
@@ -37,7 +36,7 @@ const ReviewStarList: Array<Option> = [
   },
 ];
 
-function index() {
+function Index() {
   const { addReview, reviewList } = useReviewStore();
   const [reviewStar, setReviewStar] = useState<Option>(ReviewStarList[0]);
   const [title, setTitle] = useState<string>("");
@@ -89,7 +88,6 @@ function index() {
           별점
         </Label>
         <Select
-          name="reviewStar"
           value={reviewStar}
           options={ReviewStarList}
           onChange={(option: Option) => {
@@ -98,7 +96,7 @@ function index() {
         />
       </S.ElementWrap>
       <S.ButtonWrapper>
-        <Button height={46} type="button" onClick={handleAddReview}>
+        <Button height={46} onClick={handleAddReview}>
           등록
         </Button>
       </S.ButtonWrapper>
@@ -106,4 +104,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

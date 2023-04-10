@@ -1,10 +1,7 @@
 import create from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-import { getLevel } from "@utils/sort";
-
 import { Review } from "@type/review";
-
 
 interface ReviewState {
   reviewList: Array<Review>;
@@ -54,19 +51,7 @@ export const useReviewStore = create<ReviewState>()(
         searchWord: "",
         addReview: (review: Review) => {
           set((state: ReviewState) => ({
-            reviewList: [...state.reviewList, review].sort(
-              (a: Review, b: Review) => {
-                if (b.score !== a.score) return b.score - a.score;
-                else {
-                  const aLevel = getLevel(a.title);
-                  const bLevel = getLevel(b.title);
-                  if (aLevel === bLevel) {
-                    return b.title.charCodeAt(0) - a.title.charCodeAt(0);
-                  }
-                  return aLevel - bLevel;
-                }
-              }
-            ),
+            reviewList: [...state.reviewList, review],
           }));
         },
         searchReview: (word: string) => {
