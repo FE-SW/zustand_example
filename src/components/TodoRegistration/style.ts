@@ -4,7 +4,7 @@ import theme from "@styles/theme";
 export const Container = styled.div`
   padding: 20px;
   background-color: ${theme.color.backGray};
-  height: 375px;
+  height: 290px;
 `;
 
 export const ElementWrap = styled.div`

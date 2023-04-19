@@ -3,7 +3,7 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  children: React.ReactNode
+  children?: React.ReactNode
   fontSize?: number;
   fontWeight?: number;
   marginBottom?: number;

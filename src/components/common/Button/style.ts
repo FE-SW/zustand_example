@@ -22,4 +22,6 @@ export const Button = styled.button<Omit<Props, "children">>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   color: ${({ color }) => color};
   border-radius: ${({ borderRadious }) => borderRadious}px;
-`;
+  border:none;
+  `
+;

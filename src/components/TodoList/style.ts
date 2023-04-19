@@ -2,20 +2,18 @@ import theme from "@styles/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-height: calc(100vh - 500px);
-  padding: 20px;
+  min-height: calc(100vh - 400px);
+  padding: 20px 20px 20px 20px;
   background-color: ${theme.color.backGray};
 `;
 
 export const ReviewBox = styled.div`
   display: flex;
-  padding-left: 20px;
-  align-items: center;
-  height: 150px;
+  flex-direction: column; 
+  padding: 40px 20px;
   border: 1px solid ${theme.color.borderGray};
   background-color: ${theme.color.white};
   border-radius: 10px;
-  margin-bottom: 20px;
 `;
 
 export const ReviewContent = styled.div`
@@ -38,3 +36,12 @@ export const Star = styled.div`
 export const StarWrap = styled.div`
   display: flex;
 `;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  width: 150px;
+`;
+
+export const Padding = styled.div`
+  padding: 0 2px;
+`

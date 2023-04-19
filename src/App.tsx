@@ -1,9 +1,10 @@
 import { ToastContainer } from "react-toastify";
 import styled from "styled-components";
 
-import ReviewRegistration from "@components/ReviewRegistration";
-import ReviewSearch from "@components/ReviewSearch";
-import ReviewHistory from "@components/ReviewHistory";
+import TodoRegistration from "@components/TodoRegistration";
+import TodoSearch from "@components/TodoSearch";
+import TodoList from "@components/TodoList";
+import FinishedList from "@components/FinishedList";
 
 import "react-toastify/dist/ReactToastify.css";
 import * as S from "./style";
@@ -23,9 +24,10 @@ function App() {
       <StyledToast />
       <S.Container>
         <S.Wrapper>
-          <ReviewRegistration />
-          <ReviewSearch />
-          <ReviewHistory />
+          <TodoRegistration />
+          <TodoSearch />
+          <TodoList />
+          <FinishedList/>
         </S.Wrapper>
       </S.Container>
     </>
